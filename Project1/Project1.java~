@@ -1,0 +1,36 @@
+import java.util.Scanner; //Scanner import
+import java.io.*; //Necessary file error import
+
+public class Project1 {
+  public static void main(String[] args) throws IOException {
+    //Create Scanner 
+    Scanner numberFile = new Scanner(new File("project1.txt"));
+    
+    //Create array
+    int[] numArray = new int[50];
+    
+    for(int i = 0; i < numArray.length; i++) {
+      numArray[i] = numberFile.nextInt();
+    }//end for
+    
+    for(int i = 0; i < numArray.length - 1; i++) {
+      int min = numArray[i];
+      int minIndex = i;
+      for(int j = i + 1; j < numArray.length; j++) {
+        if(min > numArray[i]) {
+          min = numArray[i];
+          minIndex = i;
+        }//end if
+      }//end for
+      
+      if(minIndex != i) {
+        numArray[minIndex] = numArray[i];
+        numArray[i] = min;
+      }//end if
+    }//end for
+    
+    for(int i = 0; i < numArray.length; i++) {
+      System.out.print(numArray[i] + " ");
+    }//end for
+  }//end main
+}//end class

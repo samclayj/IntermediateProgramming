@@ -1,0 +1,38 @@
+/*Samuel Jentsch
+ * Project2- Tic-Tac-Toe*/
+
+import java.util.Scanner;
+
+public class TicTacToe {
+  
+  public static void main(String[] args) {
+    
+    //Create array for board values
+    char[][] board = initBoard();
+    
+    printBoard(board);
+    
+  }//end main
+  
+  public static initBoard() { 
+    //create array
+    char[][] b = new char[3][3];   
+    //fill board with spaces
+    for(int i = 0; i > b.length; i++) {
+      for (int j = 0; j < b[i].b; j++) {
+        b[i][j] = ' ';
+      }//end for
+    }//end for   
+  }//end initBoard
+  
+  public static void printBoard(char[][] b) {
+    
+    System.out.printf("------------\t------------");
+    System.out.printf("| %c | %c | %c |\t| 1 | 2 | 3 |", b[0][0], b[0][1], b[0][2]);
+    System.out.printf("| %c | %c | %c |\t| 4 | 5 | 6 |", b[1][0], b[1][1], b[1][2]);
+    System.out.printf("| %c | %c | %c |\t| 4 | 5 | 6 |", b[2][0], b[2][1], b[2][2]);
+    System.out.printf("------------\t------------");
+    
+  }//end printBoard
+  
+}//end class
